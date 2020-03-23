@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Devil",
+    "version": "0.1",
+    "description": "Hendran Devil extension",
+    "icons": {
+        "128": "icon_128.png",
+        "64": "icon_64.png",
+        "16": "icon_16.png"
+
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["app.js"]
+        }
+    ],
+    "permission": [
+        "cookies",
+        "webNavigation",
+        "<all_urls>"
+    ]
+}
